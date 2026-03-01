@@ -119,10 +119,10 @@
   --sidebar-border: #2A2A2A;
   --sidebar-ring: #D4AF37;
   
-  /* Typography */
-  --font-display: "Cabinet Grotesk", system-ui, sans-serif;
-  --font-body: "Instrument Sans", system-ui, sans-serif;
-  --font-mono: "DM Mono", monospace;
+  /* Typography - using Google Fonts loaded via layout.tsx */
+  --font-display: "DM Sans", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
   
   /* Text Colors */
   --text-primary: #FAFAFA;
@@ -140,34 +140,14 @@
   --glow-accent: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
-/* Font imports */
-@font-face {
-  font-family: 'Cabinet Grotesk';
-  src: url('/fonts/CabinetGrotesk-Variable.woff2') format('woff2');
-  font-weight: 100 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Instrument Sans';
-  src: url('/fonts/InstrumentSans-Variable.woff2') format('woff2');
-  font-weight: 100 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DM Mono';
-  src: url('/fonts/DMMono-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DM Mono';
-  src: url('/fonts/DMMono-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-display: swap;
-}
+/* 
+ * Fonts are loaded via Google Fonts in layout.tsx:
+ * - DM Sans (body text) - loaded via <link> tag
+ * - DM Mono (monospace) - loaded via <link> tag
+ * - Inter (system font) - loaded via next/font/google
+ * 
+ * For display font, we use DM Sans with heavier weights
+ */
 
 @layer base {
   * {
